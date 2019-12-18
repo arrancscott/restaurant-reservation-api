@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - 'db/schema.rb' # Auto-generated and shouldn't be style checked
+    - 'bin/*'
+
+Style/Documentation:
+  Enabled: False
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*' # Ignore block length in spec files
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb' # Auto-generated and shouldn't be style checked
