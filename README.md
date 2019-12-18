@@ -19,7 +19,7 @@ $ rails db:seed
 
 This will create you a user and output the credentials needed in order to use the API.
 
-The following headers need to be sent:
+The following headers must be sent as part of the request or you will get an unauthorized exception:
 
 Key: `X-User-Email` Value: `EMAIL_ADDRESS`
 
@@ -27,6 +27,8 @@ Key: `X-User-Token` Value: `AUTHENTICATION_TOKEN`
 
 By default, the user will be created with `admin` permissions (CRUD access to all models) but this can be changed by
 jumping into a `rails console` and manually setting the role to either `restaurant` or `guest`.
+
+The roles `restaurant` and `guest` can only CRUD `Reservation`.
 
 ## Usage
 
