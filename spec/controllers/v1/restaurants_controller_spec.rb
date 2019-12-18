@@ -37,6 +37,7 @@ describe V1::RestaurantsController do
       }
     }
     expect(json['restaurant']['name']).to eq('My Awesome Restaurant')
+    expect(json['opening_times'].count).to eq(1)
   end
 
   it 'deletes a restaurant' do
