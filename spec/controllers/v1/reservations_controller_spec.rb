@@ -15,7 +15,7 @@ describe V1::ReservationsController do
     expect(json['status']).to eq(reservation.status)
   end
 
-  it 'updates a restaurant' do
+  it 'updates a reservation' do
     restaurant = create(:restaurant, :with_guest_and_reservation)
     guest = restaurant.guests.first
     reservation = restaurant.reservations.first
@@ -25,7 +25,7 @@ describe V1::ReservationsController do
     expect(json['covers']).to eq(10)
   end
 
-  it 'creates a restaurant' do
+  it 'creates a reservation' do
     restaurant = create(:restaurant, :with_guest)
     guest = restaurant.guests.first
     post :create, params: { restaurant_id: restaurant.id, guest_id: guest.id, "reservation": {
@@ -40,7 +40,7 @@ describe V1::ReservationsController do
     expect(json['notes']).to eq("I'm a cartoon character so I can't eat real food")
   end
 
-  it 'deletes a restaurant' do
+  it 'deletes a reservation' do
     restaurant = create(:restaurant, :with_guest_and_reservation)
     guest = restaurant.guests.first
     reservation = restaurant.reservations.first
