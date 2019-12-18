@@ -9,7 +9,7 @@ Once all the dependencies are installed, run `rails s` to start the server.
 ## Setup
 
 To use this API you need to create a user and retrieve a unique authentication token. This token must then be passed
-into all requests along with the email address of the user via the headers.
+into all requests along with the email address of the user, via the headers.
 
 To create a user, run the following seed:
 
@@ -19,7 +19,7 @@ $ rails db:seed
 
 This will create you a user and output the credentials needed in order to use the API.
 
-The format should be:
+The following headers need to be sent:
 
 Key: `X-User-Email` Value: `EMAIL_ADDRESS`
 
